@@ -1,0 +1,35 @@
+id_produktu | nazwa_produktu | id_klienta | nazwa_klienta | data_zamowienia | cena_produktu | ilość | VAT | suma_brutto | suma_netto
+
+
+Zad.1
+
+id_produktu ->  nazwa_produktu, cena_produktu, VAT
+nazwa_produktu -> cena_produktu, VAT, id_produktu
+id_klienta -> nazwa_klienta, data_zamowienia, suma_brutto, suma_netto
+cena_produktu -> VAT, nazwa_produktu
+suma_brutto -> cena_produktu, VAT, ilość
+suma netto -> cena_produktu,ilość
+data_zamowienia -> suma_netto, suma_brutto, ilość, id_klienta
+
+
+Zad.2
+
+Klucze kandydujące:
+nazwa_produktu
+VAT (zakładając, że każdy produkt jest innego typu)
+suma_brutto + suma_netto
+
+
+Zad.3
+
+pomieszczenia
+id_pomieszczenia | numer_pomieszczenia | id_budynku | powierzchnia | liczba_okien | liczba_drzwi | ulica | miasto | kod_pocztowy
+
+id_pomieszczenia -> numer_pomieszczenia, id_budynku, powierzchnia, ulica, miasto, kod_pocztowy
+id_budynku -> ulica, miasto, kod_pocztowy, liczba_okien, liczba_drzwi
+miasto -> kod_pocztowy
+numer_pomieszczenia -> id_pomieszczenia, id_budynku
+
+Klucze kandydujące:
+id_budynku + numer_pomieszczenia
+
